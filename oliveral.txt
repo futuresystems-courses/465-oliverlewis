@@ -1,0 +1,33 @@
+git clone:
+
+Clones the repository from the github account to your local computer. Its basically downloading the repository to your local setup.
+
+git add: 
+
+Add the untracked files to the git staging area.
+
+git commit: (ref: http://cloudmesh.github.io/introduction_to_cloud_computing/class/lesson/git.html)
+
+The git commit command recording everything in the staging area as a single change. When committing a change it is necessary to add a message describing the change. The change itself stores the what (what content changed), and when (time and date of a change), but you must provide a message that describes why a change was made. This message is then stored with the change and can be viewed by looking at the history of the repository.
+
+git push:
+
+ >> git push origin master
+
+push the changes made to the current branch to the master branch of the repository called origin”. In other words, git push updates the remote repository with all local changes.
+
+git pull:
+
+git pull runs git fetch with the given parameters and calls git merge to merge the retrieved branch heads into the current branch.
+
+Question )
+
+
+difference between local repository and remote repository ?
+
+By executing the git clone command you created a local copy on india of the remote repository hosted on the GitHub server. At this point there are two repositories: local and remote (also known as origin).
+
+ANY changes added via git commit are only committed to the local repository. These changes are NOT YET present at the remote git repos.
+
+to share your commits we must use git push
+The first part is git push, meaning that we are telling git to share our local changes with a remote repository.
