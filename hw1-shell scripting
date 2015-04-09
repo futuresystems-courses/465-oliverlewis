@@ -1,0 +1,48 @@
+1) Renaming files : mv statstics.txt statistics.txt
+
+2) Moving and Copying: proteins-saved.dat recombine
+
+3) Listing Directories and Files: 
+      mv fructose.dat analyzed
+      mv sucrose.dat analyzed
+
+4) Copy with Multiple Filenames
+  What does cp do when given several filenames and a directory name, as in:
+  $ cp thesis/citations.txt thesis/quotations.txt backup
+  
+  Answer: Moves both the files to the directory
+  
+  What does cp do when given three or more filenames, as in:
+  
+  Answer : Throws an error message 
+      cp: target ‘c.text’ is not a directory
+      
+5) Listing Recursively and By Time: Lists it recursively and according to time.
+
+--------------------------------------------------------------------------------------------------
+1) What does sort -n do?
+  the -n flag to specify that the sort is numerical instead of alphabetical.
+
+2) use < to redirect its input, i.e., to read from a file instead of from standard input. 
+For example, instead of writing wc mydata.dat, we could write wc < mydata.dat. 
+In the first case, wc gets a command line parameter telling it what file to open. 
+In the second, wc doesn’t have any command line parameters, so it reads from standard input, 
+but we have told the shell to send the contents of mydata.dat to wc‘s standard input.
+
+3) wc -l * | sort -n | head -3
+
+4) Why do you think uniq only removes adjacent duplicated lines? (Hint: think about very large data sets.) 
+    sometimes they could be duplicate postings if they occur continuously. Whereas if there is another different character 
+    between them then it has to be counted as another occurance. 
+
+    >> sort uniq.txt | uniq 
+    
+5) Pipe reading comprehension
+      2012-11-06,rabbit
+      2012-11-06,deer
+      2012-11-05,raccoon
+      
+6) cut -d , -f 2 uniq.txt | sort | uniq
+
+7) 
+
