@@ -44,5 +44,35 @@ but we have told the shell to send the contents of mydata.dat to wc‘s standard
       
 6) cut -d , -f 2 uniq.txt | sort | uniq
 
-7) 
+----------------------------------------------------------------------------------------------------------------
+Loops
+
+
+1) Variables in loops: 
+            fructose.dat    glucose.dat   sucrose.dat
+            fructose.dat    glucose.dat   sucrose.dat
+            fructose.dat    glucose.dat   sucrose.dat
+
+2) for datafile in *.dat
+      do
+            ls $datafile
+      done
+      
+      >>    fructose.dat    glucose.dat   sucrose.dat
+      
+3) Prints fructose.dat, glucose.dat, and sucrose.dat, and copies sucrose.dat to create xylose.dat.
+
+4) All of the text from fructose.dat, glucose.dat and sucrose.dat would be concatenated and saved to a file called sugar.dat.
+
+5) use echo
+
+6) What is the difference between the the two loops below, and which one would we want to run?:
+      the second one. because the first one will execute the commands.
+---------------------------------------------------------------------------------------------------------------------
+
+Shell Concepts Introduced
+
+
+
+
 
