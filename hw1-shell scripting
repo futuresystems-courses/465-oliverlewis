@@ -72,6 +72,14 @@ Loops
 
 Shell Concepts Introduced
 
+1) option 3 : grep -w of haiku.txt
+
+2) Count the number of files in the current working directory with the .dat extension and then display the number of files
+
+3) None of the above.
+
+4) for data in "jo" "beth" "meg" "amy"; do grep -o $data a.txt| sort wc -w ; done
+
 
 
 
