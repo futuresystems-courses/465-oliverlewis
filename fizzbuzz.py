@@ -1,9 +1,6 @@
-"""Usage: fizzbuzz.py [-vqrh]
-Arguments:
-	number : <value>
-Options:
--h --help
--v verbose mode
+""" 
+Usage: 
+	fizzbuzz.py --number=NUMBER
 """
 
 from docopt import docopt
@@ -24,4 +21,4 @@ def fizzbuzz(number):
 
 if __name__ == '__main__':
 	argv =	docopt(__doc__)
-    	print argv
+    	fizzbuzz(int(argv['--number']))
