@@ -1,0 +1,9 @@
+---
+- hosts: zookeeper
+  remote_user: root
+  tasks:
+      - name: download zookeeper
+        get_url: url=http://apache.mirrors.pair.com/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz dest=/home/ubuntu/zookeeper.tar.gz mode=0440
+      - unarchive: src=/home/ubuntu/zookeeper.tar.gz dest=/home/ubuntu/ copy=no
+      - copy: src=/N/u/oliveral/465-oliverlewis/project/zoo.cfg dest=/home/ubuntu/zookeeper-3.4.6/conf/zoo.cfg mode=0644
+      - command: /home/ubuntu/zookeeper-3.4.6/bin/zkServer.sh start

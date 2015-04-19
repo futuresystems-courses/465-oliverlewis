@@ -1,0 +1,45 @@
+heat_template_version: 2013-05-23
+
+description: first assignment on heat exercise
+
+resources:
+    web_secgroup:
+       type: OS::Neutron::SecurityGroup
+       properties:
+          rules:
+            - protocol: tcp
+              remote_ip_prefix: 0.0.0.0/0
+              port_range_min: 80
+              port_range_max: 80
+            - protocol: tcp
+              remote_ip_prefix: 0.0.0.0/0
+              port_range_min: 443
+              port_range_max: 443
+            - protocol: tcp
+              remote_ip_prefix: 0.0.0.0/0
+              port_range_min: 22
+              port_range_max: 22
+    instance_port:
+       type: OS::Neutron::Port
+       properties:
+          network_id: a762baf4-452d-4503-8b2f-27a1475942ee
+          security_groups:
+            - default
+            - { get_resource: web_secgroup }
+          fixed_ips:
+            - subnet_id: 7ce30c33-a1d4-4afb-b612-49caa48a1021
+    instance1:
+       type: OS::Nova::Server
+       properties:
+          flavor: m1.small
+          image: futuresystems/ubuntu-14.04
+          networks:
+            - port: { get_resource: instance_port }
+    instance2:
+      type: OS::Nova::Server
+      properties:
+         flavor: m1.small
+         image: futuresystems/ubuntu-14.04
+         networks:
+           - port: { get_resource: instance_port }
+

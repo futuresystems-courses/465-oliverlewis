@@ -1,5 +1,5 @@
 ---
-- hosts: ansible-test
+- hosts: zookeeper
   remote_user: ubuntu
   tasks:
     - name: Enable root login
