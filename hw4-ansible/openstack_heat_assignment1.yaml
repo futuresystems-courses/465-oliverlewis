@@ -24,18 +24,39 @@ resources:
               remote_ip_prefix: 0.0.0.0/0
               port_range_min: 22
               port_range_max: 22
-    instance_port:
+
+    instance1_port:
        type: OS::Neutron::Port
        properties:
           network_id: a762baf4-452d-4503-8b2f-27a1475942ee
           security_groups:
             - default
             - { get_resource: web_secgroup }
+
+    instance2_port:
+       type: OS::Neutron::Port
+       properties:
+          network_id: a762baf4-452d-4503-8b2f-27a1475942ee
+          security_groups:
+            - default
+            - { get_resource: web_secgroup }
+
+
     instance1:
        type: OS::Nova::Server
        properties:
+          key_name: {get_param : key_name}
           flavor: m1.small
           image: futuresystems/ubuntu-14.04
           networks:
-            - port: { get_resource: instance_port }
+            - port: { get_resource: instance1_port }
+
+    instance2:
+       type: OS::Nova::Server
+       properties:
+          key_name: {get_param : key_name}
+          flavor: m1.small
+          image: futuresystems/ubuntu-14.04
+          networks:
+            - port: { get_resource: instance2_port }
 
