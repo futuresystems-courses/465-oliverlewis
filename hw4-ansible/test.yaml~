@@ -31,9 +31,12 @@ resources:
           security_groups:
             - default
             - { get_resource: web_secgroup }
+          fixed_ips:
+            - subnet_id: 7ce30c33-a1d4-4afb-b612-49caa48a1021
     instance1:
        type: OS::Nova::Server
        properties:
+          key_name: {get_param : key_name}
           flavor: m1.small
           image: futuresystems/ubuntu-14.04
           networks:

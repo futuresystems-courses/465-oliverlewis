@@ -1,0 +1,8 @@
+storm.zookeeper.servers:
+  - "localhost"
+storm.local.dir: "/home/ubuntu/storm-local"
+nimbus.host: "10.23.1.135"
+supervisor.slots.ports:
+    - 6700
+    - 6701
+storm.zookeeper.port: 2181
