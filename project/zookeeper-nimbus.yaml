@@ -40,6 +40,7 @@
     - name: storm release
       get_url: url=http://apache.mirrors.pair.com/storm/apache-storm-0.9.4/apache-storm-0.9.4.tar.gz dest=/home/ubuntu/stormv0.9.4.tar.gz mode=0440
     - unarchive: src=/home/ubuntu/stormv0.9.4.tar.gz dest=/home/ubuntu/ copy=no
+    - copy: src=/N/u/oliveral/465-oliverlewis/project/storm.yaml dest=/home/ubuntu/apache-storm-0.9.4/conf/storm.yaml mode=0644
     - name: install java jre
       apt: name=default-jre state=present update_cache=yes
     - command: /home/ubuntu/apache-storm-0.9.4/bin/storm nimbus
@@ -58,6 +59,7 @@
     - name: storm release
       get_url: url=http://apache.mirrors.pair.com/storm/apache-storm-0.9.4/apache-storm-0.9.4.tar.gz dest=/home/ubuntu/stormv0.9.4.tar.gz mode=0440
     - unarchive: src=/home/ubuntu/stormv0.9.4.tar.gz dest=/home/ubuntu/ copy=no
+    - copy: src=/N/u/oliveral/465-oliverlewis/project/storm.yaml dest=/home/ubuntu/apache-storm-0.9.4/conf/storm.yaml mode=0644
     - name: install java jre
       apt: name=default-jre state=present update_cache=yes
     - command: /home/ubuntu/apache-storm-0.9.4/bin/storm supervisor
