@@ -2,14 +2,13 @@
 Dev-ops for Apache Storm on Openstack
 =================
 
-I’ll be using a 3 node Openstack network on FutureSystems. (Note this is configurable and scalable.)
-
-Node 1: Will contain the Zookeeper server and Storm Nimbus node
-Node 2 & 3: Will be the supervisor nodes.
-
 -----------------
 Pre-requisites required for setup
 
+Iâ€™ll be using a 3 node Openstack network on FutureSystems. (Note this is configurable and scalable.)
+
+Node 1: Will contain the Zookeeper server and Storm Nimbus node
+Node 2 & 3: Will be the supervisor nodes.
 1. Must be familiar with the terminal.
 2. Must have access to FutureSystems and provision 3 VM's through the FutureSystems interface.
 3. Must assign the machines with a public IP address. This is necessary for the Nimbus node to view the Storm UI. 
