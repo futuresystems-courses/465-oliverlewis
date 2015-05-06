@@ -29,7 +29,6 @@
       - copy: src=zoo.cfg dest=/home/ubuntu/zookeeper-3.4.6/conf/zoo.cfg mode=0644
       - name: install java jre
         apt: name=default-jre state=present update_cache=yes
-      - command: /home/ubuntu/zookeeper-3.4.6/bin/zkServer.sh start
 
 - hosts: nimbus
   remote_user: root
@@ -43,12 +42,6 @@
     - copy: src=storm.yaml dest=/home/ubuntu/apache-storm-0.9.4/conf/storm.yaml mode=0644
     - name: install java jre
       apt: name=default-jre state=present update_cache=yes
-    - command: /home/ubuntu/apache-storm-0.9.4/bin/storm nimbus
-      poll: 0
-      async: 300
-    - command: /home/ubuntu/apache-storm-0.9.4/bin/storm ui
-      poll: 0
-      async: 300
 
 - hosts: supervisor
   remote_user: root
@@ -62,7 +55,4 @@
     - copy: src=storm.yaml dest=/home/ubuntu/apache-storm-0.9.4/conf/storm.yaml mode=0644
     - name: install java jre
       apt: name=default-jre state=present update_cache=yes
-    - command: /home/ubuntu/apache-storm-0.9.4/bin/storm supervisor
-      poll: 0
-      async: 300
 

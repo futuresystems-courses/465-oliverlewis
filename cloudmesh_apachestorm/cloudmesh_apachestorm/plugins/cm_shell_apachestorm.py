@@ -18,14 +18,13 @@ class cm_shell_apachestorm:
 
           Usage:
               apachestorm COMMAND
-              apachestorm deploy --nimbusNode=NIMBUSNODE --zookeeperNode=ZOOKEEPERNODE --supervisorNodes=SUPERVISORNODES...
-
-          tests via ping if the host ith the give NAME is reachable
+              apachestorm COMMAND --stormTtl=TIMETOLIVE
+              apachestorm COMMAND --nimbusNode=NIMBUSNODE --zookeeperNode=ZOOKEEPERNODE --supervisorNodes=<SUPERVISORNODES>...
 
           Arguments:
 
             COMMAND          deploy, start, stop commImand
-            deploy           deploy command
+            TIMETOLIVE       storm alive time
             NIMBUSNODE       storms nimbus node ip address
             ZOOKEEPERNODE    zookeeper nodes ip address
             SUPERVISORNODES  supervisornode ip addresses 
@@ -37,10 +36,10 @@ class cm_shell_apachestorm:
         """
         #pprint(arguments)
         if arguments["COMMAND"] == "start":
-            command_apachestorm.start(arguments["COMMAND"])
+            command_apachestorm.start(arguments["--stormTtl"])
         if arguments["COMMAND"] == "stop":
-            command_apachestorm.stop(arguments["COMMAND"])
-        if arguments["deploy"] is not None:
+            command_apachestorm.stop()
+        if arguments["COMMAND"] == "deploy":
             command_apachestorm.deploy(arguments["--nimbusNode"],arguments["--zookeeperNode"], arguments["--supervisorNodes"])
 
 
