@@ -26,11 +26,11 @@ Setup instructions with cloudmesh
     4. >> ssh-add ~/.ssh/<key-used-to-create-vm's>
     4. >> cm
     
-    :Usage::
+    :Usage:\:
         * apachestorm COMMAND
         * apachestorm COMMAND --stormTtl=TIMETOLIVE
         * apachestorm COMMAND --nimbusNode=NIMBUSNODE --zookeeperNode=ZOOKEEPERNODE --supervisorNodes=<SUPERVISORNODES>...
-    :Arguments::
+    :Arguments:\:
         * COMMAND          deploy, start, stop commImand
         * TIMETOLIVE       storm alive time
         * NIMBUSNODE       storms nimbus node ip address
