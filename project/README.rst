@@ -84,4 +84,4 @@ use $variables in the above and use export command to assign them assuming you u
 Example Usage
 ---------------
 
-Put here a simple example in on how to use storm as to verify that the deployment works
+    Example video on `YouTube <https://youtu.be/3EQD7BGXEnk>_`.
