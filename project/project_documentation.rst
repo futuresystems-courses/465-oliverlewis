@@ -55,3 +55,18 @@ Apache Storm UI interface
 --------------------------
 
 * Go the the public ip address of the nimbus node and use port 8080 to view the UI.
+
+Example
+----------
+
+In this example we will do this and that and the other.
+
+::
+
+   cm apachestorm ???
+   cm apachestorm ???
+   
+Describe wht you do and put the concrete commands there.
+use $variables in the above and use export command to assign them assuming you use bash
+
+
