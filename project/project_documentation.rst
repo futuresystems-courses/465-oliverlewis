@@ -27,9 +27,9 @@ Setup instructions with cloudmesh
     4. >> cm
     
     :Usage:
-        |apachestorm COMMAND
-        |apachestorm COMMAND --stormTtl=TIMETOLIVE
-        |apachestorm COMMAND --nimbusNode=NIMBUSNODE --zookeeperNode=ZOOKEEPERNODE --supervisorNodes=<SUPERVISORNODES>...
+        | apachestorm COMMAND
+        | apachestorm COMMAND --stormTtl=TIMETOLIVE
+        | apachestorm COMMAND --nimbusNode=NIMBUSNODE --zookeeperNode=ZOOKEEPERNODE --supervisorNodes=<SUPERVISORNODES>...
     :Arguments:
         COMMAND          deploy, start, stop commImand
         TIMETOLIVE       storm alive time
