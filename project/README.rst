@@ -78,8 +78,6 @@ Note the nodes must be the the nodes you have created using your key.
    cm apachestorm start --stormTtl=600
    cm apachestorm stop
    
-Describe wht you do and put the concrete commands there.
-use $variables in the above and use export command to assign them assuming you use bash
 
 Example Usage
 ---------------
