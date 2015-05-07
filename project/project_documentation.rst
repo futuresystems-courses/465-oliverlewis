@@ -23,10 +23,23 @@ Setup instructions with cloudmesh
 
     git clone https://github.com/futuresystems/465-oliverlewis.git
     cd cloudmesh_apachestorm
+    python setup.py install
+    
+Now edit the file ~/.cloudmesh/cmd3.yaml and add the line::
+
+   - cloudmesh_apachestorm.plugins
+   
+in the module list. Now you are ready to use it. To simplify password management we recommend that you use ssh agent::
+
     eval `ssh-agent -s`
     ssh-add ~/.ssh/<key-used-to-create-vm's>
+    
+Next you can start the cloudmesh shell and the apachestorm command will be available::
+
     cm
     
+Command
+-------------
 :Usage:
     | apachestorm COMMAND
     | apachestorm COMMAND --stormTtl=TIMETOLIVE
