@@ -31,11 +31,11 @@ Setup instructions with cloudmesh
         | apachestorm COMMAND --stormTtl=TIMETOLIVE
         | apachestorm COMMAND --nimbusNode=NIMBUSNODE --zookeeperNode=ZOOKEEPERNODE --supervisorNodes=<SUPERVISORNODES>...
     :Arguments:
-        COMMAND          deploy, start, stop commImand
-        TIMETOLIVE       storm alive time
-        NIMBUSNODE       storms nimbus node ip address
-        ZOOKEEPERNODE    zookeeper nodes ip address
-        SUPERVISORNODES  supervisornode ip addresses 
+        | COMMAND          deploy, start, stop commImand
+        | TIMETOLIVE       storm alive time
+        | NIMBUSNODE       storms nimbus node ip address
+        | ZOOKEEPERNODE    zookeeper nodes ip address
+        | SUPERVISORNODES  supervisornode ip addresses 
      
 -----------------
 Apache Storm UI interface
