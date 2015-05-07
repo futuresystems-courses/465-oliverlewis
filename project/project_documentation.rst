@@ -56,8 +56,8 @@ Apache Storm UI interface
 
 * Go the the public ip address of the nimbus node and use port 8080 to view the UI.
 
-Example
-----------
+Example Deployment
+-------------------
 
 In this example we will do this and that and the other.
 
@@ -69,4 +69,7 @@ In this example we will do this and that and the other.
 Describe wht you do and put the concrete commands there.
 use $variables in the above and use export command to assign them assuming you use bash
 
+Example Usage
+---------------
 
+Put here a simple example in on how to use storm as to verify that the deployment works
