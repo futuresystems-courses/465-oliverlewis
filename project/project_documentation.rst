@@ -16,6 +16,13 @@ Node 2 & 3: Will be the supervisor nodes.
 5. Must have git installed. install `git <http://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
 6. Must have ansible installed. install `ansible <http://docs.ansible.com/intro_installation.html>`_.
 
+Source code 
+-------------
+
+The source code for the apache storm commad can be browed at
+
+* https://github.com/futuresystems/465-oliverlewis/tree/master/cloudmesh_apachestorm
+
 Setup instructions with cloudmesh
 ----------------------------------
 
