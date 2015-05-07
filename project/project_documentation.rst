@@ -16,29 +16,27 @@ Node 2 & 3: Will be the supervisor nodes.
     5. Must have git installed.
     6. Must have ansible installed.
 
-
 -----------------
-Deployment instructions without cloudmesh
------------------
-
-    1. git clone https://github.com/futuresystems/465-oliverlewis.git
-    2. cd project
-    3. edit the inventory file and enter the IP address's of the machines you started using FutureSystems. (At this time only 1 nimbus node and only 1 zookeeper node and N supervisor nodes are allowed)
-    4. edit the storm.yaml file and enter the IP address of the machine on which the nimbus node and zookeeper node will reside.
-    5. ansible-playbook -i inventory.txt -c ssh zookeeper-nimbus.yaml
-
-
------------------
-Deployment instructions with cloudmesh
+Setup instructions with cloudmesh
 -----------------
 
-    1. git clone https://github.com/futuresystems/465-oliverlewis.git
-    2. cd cloudmesh_apachestorm
-    3. edit the inventory file and enter the IP address's of the machines you started using FutureSystems. (At this time only 1 nimbus node and only 1 zookeeper node and N supervisor nodes are allowed)
-    4. edit the storm.yaml file and enter the IP address of the machine on which the nimbus node and zookeeper node will reside.
-    5. ansible-playbook -i inventory.txt -c ssh zookeeper-nimbus.yaml
-
-
+    1. >> git clone https://github.com/futuresystems/465-oliverlewis.git
+    2. >> cd cloudmesh_apachestorm
+    3. >> eval `ssh-agent -s`
+    4. >> ssh-add ~/.ssh/<key-used-to-create-vm's>
+    4. >> cm
+    
+    Usage:
+        apachestorm COMMAND
+        apachestorm COMMAND --stormTtl=TIMETOLIVE
+        apachestorm COMMAND --nimbusNode=NIMBUSNODE --zookeeperNode=ZOOKEEPERNODE --supervisorNodes=<SUPERVISORNODES>...
+    Arguments:
+        COMMAND          deploy, start, stop commImand
+        TIMETOLIVE       storm alive time
+        NIMBUSNODE       storms nimbus node ip address
+        ZOOKEEPERNODE    zookeeper nodes ip address
+        SUPERVISORNODES  supervisornode ip addresses 
+    
 -----------------
 Apache Storm UI interface
 -----------------
