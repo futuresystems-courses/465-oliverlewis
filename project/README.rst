@@ -66,12 +66,15 @@ Apache Storm UI interface
 Example Deployment
 -------------------
 
-In this example we will do this and that and the other.
-
+In this example we will 
+    - First deploy Apache Storm on the nodes.
+    - Start Apache Storm
+    - Stop Apache Storm
 ::
 
-   cm apachestorm ???
-   cm apachestorm ???
+   cm apachestorm deploy --nimbusNode=10.23.1.220 --zookeeperNode=10.23.1.220 --supervisorNode=10.23.1.217 --supervisorNode=10.23.1.218
+   cm apachestorm start --stormTtl=600
+   cm apachestorm stop
    
 Describe wht you do and put the concrete commands there.
 use $variables in the above and use export command to assign them assuming you use bash
