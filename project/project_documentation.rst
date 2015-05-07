@@ -13,8 +13,8 @@ Node 2 & 3: Will be the supervisor nodes.
     2. Must have access to FutureSystems and provision 3 VM's through the FutureSystems interface.
     3. Must assign the machines with a public IP address. This is necessary for the Nimbus node to view the Storm UI. 
     4. Open port 8080 on the Nimbus node. This is done by changing the security group and enabling 8080 port access.
-    5. Must have git installed.
-    6. Must have ansible installed.
+    5. Must have git installed. install `git <http://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
+    6. Must have ansible installed. install `ansible <http://docs.ansible.com/intro_installation.html>`_.
 
 -----------------
 Setup instructions with cloudmesh
