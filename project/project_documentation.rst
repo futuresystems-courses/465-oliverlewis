@@ -1,10 +1,9 @@
-=================
 Dev-ops for Apache Storm on Openstack
-=================
+========================================
 
------------------
 Pre-requisites required for setup
------------------
+-----------------------------------
+
 I’ll be using a 3 node Openstack network on FutureSystems. (Note this is configurable and scalable.)
 
 Node 1: Will contain the Zookeeper server and Storm Nimbus node
@@ -17,15 +16,15 @@ Node 2 & 3: Will be the supervisor nodes.
 5. Must have git installed. install `git <http://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
 6. Must have ansible installed. install `ansible <http://docs.ansible.com/intro_installation.html>`_.
 
------------------
 Setup instructions with cloudmesh
------------------
+----------------------------------
 
-    1. >> git clone https://github.com/futuresystems/465-oliverlewis.git
-    2. >> cd cloudmesh_apachestorm
-    3. >> eval `ssh-agent -s`
-    4. >> ssh-add ~/.ssh/<key-used-to-create-vm's>
-    4. >> cm
+::
+    git clone https://github.com/futuresystems/465-oliverlewis.git
+    cd cloudmesh_apachestorm
+    eval `ssh-agent -s`
+    ssh-add ~/.ssh/<key-used-to-create-vm's>
+    cm
     
     :Usage:
         | apachestorm COMMAND
@@ -38,8 +37,7 @@ Setup instructions with cloudmesh
         | ZOOKEEPERNODE    zookeeper nodes ip address
         | SUPERVISORNODES  supervisornode ip addresses 
      
------------------
 Apache Storm UI interface
------------------
+--------------------------
 
-    * Go the the public ip address of the nimbus node and use port 8080 to view the UI.
+* Go the the public ip address of the nimbus node and use port 8080 to view the UI.
