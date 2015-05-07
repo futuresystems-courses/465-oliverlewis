@@ -84,4 +84,4 @@ use $variables in the above and use export command to assign them assuming you u
 Example Usage
 ---------------
 
-    Example video on `YouTube <https://youtu.be/3EQD7BGXEnk>_`.
+    Example video on `YouTube <https://youtu.be/3EQD7BGXEnk>`_.
