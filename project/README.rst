@@ -70,6 +70,8 @@ In this example we will
     - First deploy Apache Storm on the nodes.
     - Start Apache Storm
     - Stop Apache Storm
+    
+Note the nodes must be the the nodes you have created using your key.
 ::
 
    cm apachestorm deploy --nimbusNode=10.23.1.220 --zookeeperNode=10.23.1.220 --supervisorNode=10.23.1.217 --supervisorNode=10.23.1.218
